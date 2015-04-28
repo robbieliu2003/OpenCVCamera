@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <opencv2/highgui/cap_ios.h>
 
-@interface ViewController : UIViewController
+#ifdef __cplusplus
+using namespace cv;
+#endif
 
+@interface ViewController : UIViewController<CvVideoCameraDelegate>
+{
+    UIImageView *cameraView;
+    UIScrollView *scrollView;
+    UIButton *cameraButton;
+    UIActivityIndicatorView *activity;
+    
+    CvVideoCamera* videoCamera;
+}
+
+- (IBAction)actionCamera:(id)sender;
+
+@property (nonatomic, retain) NSMutableArray *imageArray;
 
 @end
 

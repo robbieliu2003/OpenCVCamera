@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  OpenCVCamera
+//
+//  Created by 刘伟 on 15/4/15.
+//  Copyright (c) 2015年 刘伟. All rights reserved.
+//
+
+#ifndef OpenCVCamera_PrefixHeader_pch
+#define OpenCVCamera_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
+#endif
+
+#endif
